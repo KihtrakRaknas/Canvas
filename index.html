@@ -11,9 +11,18 @@
     <body>
         <div class="container">
             <h1 class="text-center">Canvases!</h1>
-            <canvas></canvas>
-            <p>Above is a canvas made with <code>&#x3C;canvas&#x3E;&#x3C;/canvas&#x3E;</code></p>
+            <canvas id="firstCanvas"></canvas>
+            <p>The above is a canvas made with <code class = "html">&#x3C;canvas&#x3E;&#x3C;/canvas&#x3E;</code>. When height and width are not specified, the browser creates a canvas <em><span id="firstCanvasWidth">300 px</span></em> wide and <em><span id="firstCanvasHeight">150 px</span></em> tall.</p>
+            
+            <p><button id = "TriggerSquareInFirstCanvas" type="button" class="btn btn-link">Select this</button> to create a black rectangle filling up the canvas. It was created by first creating a context object. We are rendering 2d graphics so the context object would be <code class = "javascript">var context = document.getElementById("IdOfCanvas").getContext("2d");</code>. <br><br>
+                With the context object we can instuct the browser to render things. To draw a rectangle, you would use <code class = "javascript">context.fillRect(x, y, width, height);</code> where x and y represents the cordinates of the top left of the square. It's important to remember that the coordinate system on a canvas has (0,0) at the top left. This means the code used to render the above rectangle was <code class = "javascript">context.fillRect(0, 0, firstCanvas.width, firstCanvas.height);</code>.</p>
+            <p><button id = "TriggerClearFirstCanvas" type="button" class="btn btn-link disabled">Select this</button> to clear the canvas. This uses almost the exact same syntax except instead of <code class = "javascript">context.<em>fillRect</em>(x, y, width, height);</code> you would use <code class = "javascript">context.<em>clearRect</em>(x, y, width, height);</code></p>
+            
+            <br>
+            <span><div class="red keyBox"></div>HTML code<div class="lightRed keyBox"></div>Javascript code</span>
+            <br>
         </div>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>

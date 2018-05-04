@@ -1,0 +1,32 @@
+code {
+    background-color: #f0f0f0;
+}
+
+code.html{
+    color: #EC608C;
+}
+
+code.javascript{
+    color: #f00101;
+}
+
+.keyBox{
+    height: 10px; 
+    width: 10px;
+    display: inline-block; 
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+.red{
+    background-color: #f00101;
+    margin-left: 10px!important;
+}
+
+.lightRed{
+    background-color: #EC608C;
+}
+
+em {
+    background-color: #f5f5f5;
+}
